@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 03 Bulan Mei 2020 pada 08.52
+-- Waktu pembuatan: 05 Bulan Mei 2020 pada 12.11
 -- Versi server: 10.4.11-MariaDB
 -- Versi PHP: 7.2.28
 
@@ -40,7 +40,7 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`, `role`) VALUES
-(1, 'wahyu', '$2y$10$xzuHSH5R0xR9W6gRqlKcyOVLZzLwFVxW7UR2awcgdB4Ju0MIkNI7q', '1');
+(1, 'admin', '$2y$10$PimyjnSgtxEHcT2vzFBCtOoFGasy30qY3VsBGsotRJIr4d5Dj/Qdy', '1');
 
 -- --------------------------------------------------------
 
@@ -71,7 +71,7 @@ INSERT INTO `barang` (`id_barang`, `nama`, `harga`, `gambar`, `paket`, `deskrips
 (4, 'MSI D’GREEN KOHIE', 425000, 'Gambar_-_MSI_D’GREEN_KOHIE.jpg', 'silver', '', '', '', ''),
 (5, 'MSI GARTEA', 425000, 'Gambar_-_MSI_GARTEA.jpg', 'silver', '', '', '', ''),
 (6, 'MSI MANJAVIKAN', 425000, 'Gambar_-_MSI_MANJAVIKAN.jpg', 'silver', '', '', '', ''),
-(7, 'MSI GOLD BEAUTY GLOWING SERUM', 650000, 'Gambar_-_MSI_GOLD_BEAUTY_GLOWING_SERUM.jpg', 'gold', '', '', '', ''),
+(7, 'MSI GOLD BEAUTY GLOWING SERUM', 650000, 'Gambar_-_.jpg', 'gold', '', '', '', ''),
 (8, 'MSI BODYLOTION', 650000, 'Gambar_-_MSI_BODYLOTION.jpg', 'gold', '', '', '', ''),
 (9, 'MSI BIO SIMAPRO', 650000, 'Gambar_-_MSI_BIO_SIMAPRO.jpg', 'gold', '', '', '', ''),
 (10, 'MSI MAHKOTA RAYA MOCHACCINO', 1000000, 'Gambar_-_MSI_MAHKOTA_RAYA_MOCHACCINO.jpg', 'platinum', '', '', '', ''),
@@ -101,7 +101,7 @@ CREATE TABLE `slider` (
 --
 
 INSERT INTO `slider` (`id_slider`, `gambar`, `header1`, `header2`, `nama_button`, `link`) VALUES
-(2, 'Slider_-_PESAN_SEKARANG_JUGA!.jpg', 'PESAN SEKARANG JUGA!', 'MARI HIDUP SEHAT', 'Belanja Sekarang', '#'),
+(2, 'Gambar_-_.jpg', 'PESAN SEKARANG JUGA!', 'MARI HIDUP SEHAT', 'Belanja Sekarang', '#'),
 (3, 'Slider_-_MSI_CHARCOAL_SOAP.jpg', 'MSI CHARCOAL SOAP', 'Discount 50%', 'Belanja Sekarang', '#');
 
 --
@@ -140,13 +140,13 @@ ALTER TABLE `admin`
 -- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT untuk tabel `slider`
 --
 ALTER TABLE `slider`
-  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_slider` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

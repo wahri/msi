@@ -3,7 +3,13 @@
         <div class="container-fluid">
             <h1 class="mt-4"><?= $judul ?></h1>
             <hr>
-            <a href="<?= site_url('admin/tambahslider') ?>" class="btn btn-primary mt-3">Tambah slider</a>
+            <?php if (validation_errors()) : ?>
+                <div class="alert alert-danger" role="alert">
+                    <?= validation_errors(); ?>
+                </div>
+            <?php endif; ?>
+            <?= $this->session->flashdata('message'); ?>
+            <a href="<?= site_url('admin/tambahslider') ?>" class="btn btn-primary">Tambah slider</a>
             <div class="row">
                 <div class="col-md-8">
                     <table class="table mt-3">
@@ -23,12 +29,12 @@
                                     <td rowspan="2" class="align-middle text-center"><?= $i ?></td>
                                     <td rowspan="2"><img src="<?= base_url('assets/images/slider/') . $s['gambar'] ?>" alt="<?= $s['header1'] ?>" width="100%"></td>
                                     <td class="align-middle text-center">
-                                        <a href="" class="btn btn-warning">Edit</a>
+                                        <a href="<?= base_url('admin/editslider/') . $s['id_slider'] ?>" class="btn btn-warning">Edit</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td class="align-middle text-center">
-                                        <a href="" class="btn btn-danger">Delete</a>
+                                        <a href="<?= base_url('admin/hapusslider/') . $s['id_slider'] ?>" class="btn btn-danger">Delete</a>
                                     </td>
                                 </tr>
 
