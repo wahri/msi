@@ -58,12 +58,12 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-8 offset-sm-2 text-center colorlib-heading colorlib-heading-sm">
-                <h2>View All Products</h2>
+                <h2>Semua Produk MSI</h2>
             </div>
         </div>
         <div class="row row-pb-md">
             <?php
-            $i = 1;
+            $i = 0;
             foreach ($barang as $b) :
             ?>
                 <div class="col-md-3 col-lg-3 mb-4 text-center">
@@ -73,14 +73,15 @@
                         </a>
                         <div class="desc">
                             <h2><a href="<?= base_url('home/produk/') . $b['id_barang'] ?>"><?= $b['nama'] ?></a></h2>
-                            <span class="price">Rp. <?= $b['harga'] ?>,-</span>
+                            <span class="price"><?= "Rp. " . number_format($b['harga'],2,',','.') ?></span>
                         </div>
                     </div>
                 </div>
             <?php
+            $i++;
                 if ($i == 4) {
                     echo "<div class='w-100'></div>";
-                    $i = 1;
+                    $i = 0;
                 }
             endforeach;
             ?>

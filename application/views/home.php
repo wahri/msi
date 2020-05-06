@@ -78,7 +78,7 @@
                                     </a>
                                     <div class="desc">
                                         <h2><a href="<?= base_url('home/produk/') . $b['id_barang'] ?>"><?= $b['nama'] ?></a></h2>
-                                        <span class="price">Rp. <?= $b['harga'] ?>,-</span>
+                                        <span class="price"><?= "Rp. " . number_format($b['harga'],2,',','.') ?></span>
                                     </div>
                                 </div>
                             </div>
